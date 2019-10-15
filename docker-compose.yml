@@ -8,7 +8,7 @@ services:
     volumes:
       - ./htdocs:/var/www/html
       - ./apache.conf:/etc/apache2/sites-available/000-default.conf
-      - ./php.ini:/etc/php/7.2/cli/php.ini
+      - ./php.ini:/etc/php/7.2/apache2/php.ini
     links:
       - db
   db:
