@@ -14,7 +14,7 @@ services:
   db:
     image: mariadb:10.3
     volumes:
-      - /var/lib/mysql
+      - ./database:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=toor
       - MYSQL_DATABASE=mydb
