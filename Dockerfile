@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 RUN apt-get update -y \
   && apt-get upgrade -y \
   && apt-get update -y \
-  && apt-get install tzdata -y
+  && apt-get install tzdata curl -y
 RUN ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
 RUN apt-get -y install apache2
 RUN apt-get -y install php php-bcmath php-bz2 php-intl php-gd php-mbstring php-mysql php-zip php-fpm php-cli php-json php-curl php-xml php-soap \ 
